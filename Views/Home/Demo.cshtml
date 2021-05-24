@@ -1,0 +1,60 @@
+﻿
+@{
+    ViewData["Title"] = "Demo";
+}
+
+
+<div class="text-center align-items-center">
+    <h1 class="display-2">Temperature Check!</h1>
+    <p>
+        This simple app will help you check if your temperature is normal.
+        Enter your value and select the scale.
+    </p>
+
+    <form action="/Home/CheckTemperature" method="post" role="form">
+        <input type="number" name="temperature" placeholder="Enter temperature" required />
+        <input type="radio" name="scale" value="Celsius" required />Celsius   
+        <input type="radio" name="scale" value="Fahrenheit" required />Fahrenheit
+        <input type="submit" name="submit-button" value="Submit" />
+    </form>
+
+    <br />
+    <div class="alert alert-info" role="alert">
+
+        <h1 class="alert-heading">@ViewBag.TemperatureCheckResult</h1>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

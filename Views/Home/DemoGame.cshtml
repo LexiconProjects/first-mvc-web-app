@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewData["Title"] = "DemoGame";
+}
+
+<div class="text-center align-items-center">
+    <h1 class="display-2">Guess my number!</h1>
+    <p>I have chosen a number between 1 and 100! How fast can you guess it?</p>
+    <form action="/Home/CheckGuess" method="post" role="form">
+        <input type="number" name="inputGuess" placeholder="Enter guess" required />
+        <input type="submit" name="submit-button" value="Submit" />
+    </form>
+    <br />
+    <div class="alert alert-primary" role="alert">
+        <h1 class="alert-heading">@ViewBag.NumberGuessResult</h1>
+    </div>
+    <a href="/Home/DemoGame"><input type="button" class="btn-danger" value="Reset game" /></a>
+</div>
+
